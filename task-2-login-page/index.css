@@ -1,3 +1,93 @@
-h1 {
-    color: orange;
+body {
+    background-color: rgb(216, 211, 211);
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
+}
+.page-container {
+    min-height: 100vh;
+    overflow: hidden; 
+}
+.left-panel{
+    width: 20%;
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.logo-image img {
+    margin-top: -30px;
+    height: 100px;
+}
+
+.form-container {
+    width: 100%;
+    height: 300px;
+    background-color: rgb(240, 237, 237);
+    border: none;
+}
+
+.form-group-1 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.form-group-1 label {
+    margin-right: 10px;
+}
+
+input {
+    height: 30px;
+    width: 200px;
+    background-color: rgb(237, 224, 207);
+    border-color: rgb(194, 193, 193);
+}
+
+.form-group-2 label {
+    margin-right: 12px;
+}
+
+.btn {
+    padding: 5px 12px;
+    float: right;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-right: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: black;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #4a494b;
+}
+
+.right-panel {
+    float: right;
+    height: 100vh;
+    width:80%;
+}
+
+.right-panel img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    margin-top: 0;
+}
+
+.footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: black;
+    text-align: left;
+    padding: 15px 0;
+    clear:both;
 }
