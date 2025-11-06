@@ -1,9 +1,72 @@
 <html lang="en">
-<head >
+<head>
     <title>Task 3 Mortgage Calculator</title>
     <link href="index.css" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/segoe-ui-4" rel="stylesheet">
 </head>
 <body>
-    <h1>Task 3 Mortgage Calculator</h1>
+
+    <div class="mortgage-calculator">
+        <div class="left">
+            <div class="header">
+                <h2>Mortgage Calculator</h2>
+                <button id="clear-btn">Clear All</button>
+            </div>
+
+            <form id="mortgage-form">
+                <div class="form-item">
+                    <label class="light-text" for="mortgage-amount">Mortgage Amount</label>
+                    <div class="form-flex" id="mortgage-amount-main">
+                        <p class="form-symbol">$</p>
+                        <input type="number" id="mortgage-amount" name="mortgage-amount" required>
+                    </div>
+                </div>
+
+                <div class="form-col">
+                        <div class="form-item">
+                            <label class="light-text" for="mortgage-term">Mortgage Term</label>
+                            <div class="form-flex" id="mortgage-term-main">
+                                <input type="number" id="mortgage-term" name="mortgage-term" required>
+                                <p class="form-symbol">years</p>
+                            </div>
+                        </div>
+
+                <div class="form-item">
+                    <label class="light-text" for="interest-rate">Interest Rate</label>
+                    <div class="form-flex" id="interest-rate-main">
+                        <input type="number" id="interest-rate" name="interest-rate" required>
+                        <p class="form-symbol">%</p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="form-item">
+                    <label class="light-text">Mortgage Type</label>
+                    <div class="radio-inputs">
+                        <input type="radio" id="repayment" name="mortgage-type" value="repayment" required>
+                        <label for="repayment">Repayment</label>
+                    </div>
+
+                    <div class="radio-inputs">
+                        <input type="radio" id="interest-only" name="mortgage-type" value="interest-only" required>
+                        <label for="interest-only">Interest Only</label>
+                    </div>
+                </div>
+
+                <div class="form-item">
+                    <button id="calculate-btn" class="calculate-btn">Calculate Repayments</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="right">
+            <div id="default-text" class="default-text">
+                <img src="images/illustration-empty.svg" alt="">
+                <h2>Results shown here</h2>
+                <p class="light-text">Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
