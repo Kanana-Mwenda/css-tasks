@@ -1,3 +1,92 @@
-h1 {
-    color: orange;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #231780;
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: 0.8fr 3fr;
+    width: 150%;
+    max-width: 1000px;
+    margin: 50px auto;
+    margin-top: 160px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+.left {
+    background-color: #176f8c;
+    color: white;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left h2 {
+    margin-top: 0;
+}
+
+.left p {
+    line-height: 1.5;
+}
+
+.left footer {
+    font-size: 0.9em;
+}
+
+.right {
+    padding: 30px 20px;
+}
+
+form {
+    display: block;
+}
+
+.form-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 15px;
+    gap:20px;
+    max-width:80%;
+}
+
+.form-item {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+} 
+textarea {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    resize: vertical;
+    min-height: 100px;
+}
+
+button#send-btn {
+    background-color: rgb(20, 20, 208);
+    color: #fff;
+    width:80%;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
 }
