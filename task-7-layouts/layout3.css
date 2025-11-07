@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "nav header "
+    "nav article "
+    "nav ads"
+    "nav footer";
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 80px 1fr 60px 60px;
+  gap: 6px;
+  height: 100vh;
+  background-color: white;
+  padding: 0;
+}
+
+header {
+  grid-area: header;
+  background-color: rgb(143, 207, 48);
+  text-align: left;
+  padding: 10px;
+}
+
+nav {
+  grid-area: nav;
+  background-color: rgb(143, 207, 48);
+  padding: 10px;
+}
+
+article {
+  grid-area: article;
+  background-color: rgb(143, 207, 48);
+  padding: 10px;
+}
+
+aside {
+  grid-area: ads;
+  background-color: rgb(143, 207, 48);
+  padding: 10px;
+}
+
+footer {
+  grid-area: footer;
+  background-color: rgb(143, 207, 48);
+  padding: 10px;
+}
