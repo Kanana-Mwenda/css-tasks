@@ -114,6 +114,10 @@ background-color: blue;
     border-radius: 1.5rem;
     cursor:pointer;
 }
+.mortgage-calculator .left .calculate-btn i {
+    margin-right: 0.5rem;
+}
+
 .mortgage-calculator .left .calculate-btn:hover{
     background-color:rgb(206, 233, 70) ;
 }
