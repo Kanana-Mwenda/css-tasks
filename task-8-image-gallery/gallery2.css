@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Gallery container */
+.gallery {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    display: grid;
+    gap: 15px;
+}
+
+/* Top row: 3 columns layout */
+.top-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* middle column bigger */
+    gap: 10px;
+    height: 300px; /* total height of top row */
+}
+
+/* Left and right columns: stacked images, equal size */
+.col-left, .col-right {
+    display: grid;
+    grid-template-rows: 1fr 1fr; /* 2 equal rows */
+    gap: 10px;
+}
+
+.col-left img, .col-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Middle column: single image bigger, fills full height */
+.col-center {
+    display: flex;
+}
+
+.col-center img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Bottom row: 5 equal images using grid */
+.bottom-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
+    gap: 5px;
+}
+
+.bottom-row img {
+    width: 100%;
+    height: 100px; /* fixed uniform height */
+    object-fit: cover;
+    border-radius: 6px;
+}
