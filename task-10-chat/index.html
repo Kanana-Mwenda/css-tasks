@@ -1,143 +1,197 @@
+<!doctype html>
 <html lang="en">
-<head >
-    <title>Task 10 Chat</title>
-    <link href="index.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+<head>
+  <meta charset="utf-8" />
+  <title>Task 10 Chat</title>
+  <link href="index.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 </head>
 <body>
-    <div class="message-container">
-        <div class="header">
-            <div class="logo">
-                <img src="images/joinlogo.png" alt="logo">
-            </div>
+  <div class="message-container">
+    <!-- HEADER -->
+    <div class="header">
+      <div class="left">
+        <div class="logo"><img src="images/joinlogo.png" alt="logo"></div>
+      </div>
 
-            <div class="search-input-wrapper">
-                <span class="material-symbols-outlined">search</span>
-                <input type="text" placeholder="Search for jobs,candidates, ..."/>
-            </div>
-
-            <button class="create-btn">
-                <span class="material-symbols-outlined">add</span>
-                Create new job
-            </button>
-
-            <button class="alert-btn">
-                <span class="material-symbols-outlined">notifications</span>
-            </button>
-
-            <button class="profile">
-                <span class="material-symbols-outlined">person</span> Julian H. 
-            </button>
-
-            <div class="sidebar">
-                <p> Fintory</p>
-                <p><span class="material-symbols-outlined">dashboard</span> Dashboard</p>
-                <p><span class="material-symbols-outlined">developer_guide</span> Jobs</p>
-                <p><span class="material-symbols-outlined">group</span> Candidates</p>
-                <p><span class="material-symbols-outlined">chat_bubble</span> Messages</p>
-                <p><span class="material-symbols-outlined">corporate_fare</span> Company</p>
-                <p><span class="material-symbols-outlined">settings</span> Settings</p>
-            </div>
+      <div class="center">
+        <div class="search-input-wrapper">
+          <span class="material-symbols-outlined">search</span>
+          <input type="text" placeholder="Search for jobs, candidates, ..." />
         </div>
+      </div>
 
-        <div class="message-list">
-            <h3> Messages (25)</h3>
-            <div class="search-input-wrapper">
-                <span class="material-symbols-outlined">search</span>
-                <select id="messages">
-                    <option value="messages">All Messages</option>
-                </select>
-            </div>
-
-            <div class="messages">
-                <div class="message-item active">
-                    <strong>Julian H.</strong> <span> 2h ago</span>
-                    <p>applied for UI/UX Designer</p>
-                    <p>Julian Herbst: Hi,I have a quick question regarding my application on the open ...</p>
-                </div>
-                <div class="message-item">
-                    <strong>Ramona J.</strong><span> 12h ago</span>
-                    <p>applied for UI/UX Designer</p>
-                    <p> Lena Nattke: Hi Ramona, we just reviewed your application and we're happy to ...</p>
-                </div>
-                <div class="message-item">
-                    <strong>Dominik W.</strong><span> 2 days ago</span>
-                    <p>applied for A very very long position that</p>
-                    <p>  Good morning, I just wanted to share my design challenge results ... ...</p>
-                </div>
-                <div class="message-item">
-                    <strong>Kevin M.</strong><span> 2 days ago</span>
-                    <p>applied for A very very long position that</p>
-                    <p>  Good morning, I just wanted to share my design challenge results ... ...</p>
-                </div>
-                <div class="message-item">
-                    <strong>Ramona J</strong><span> 1 week ago</span>
-                    <p>applied for UI/UX Designer</p>
-                    <p>  Good morning, I just wanted to share my design challenge results ... ...</p>
-                </div>
-                <div class="message-item">
-                    <strong>Dominik W.</strong><span> 08.03.20</span>
-                    <p>applied for Teanlead Design</p>
-                    <p> Lena Nattke: Hi Ramona, we just reviewed your application and we're happy to ...</p>
-                </div>
-      
-        <div class="chat-area">
-            <header class="chat-header">
-                <h3> Julian Herbst</h3>
-                <p> applied for UI/UX Designer</p>
-                <button id="view-profile">View Profile</button>
-                <select id="messages">
-                    <option value="messages">Applied</option>
-                </select>
-                <button id="thumbs-up"> <span class="material-symbols-outlined">thumb_up</span></button>
-                <button id="cancel"><span class="material-symbols-outlined">close</span></button>
-                <span class="material-symbols-outlined">more_vert</span>
-            </header>
-
-            <div class="chat-messages">
-                <button id="date">09.03.20</button>
-
-                <div class="incoming">
-                    <h3> Julian Herbst</h3>
-                    <p class="message"> Hi Lena, I have a quick question regarding my application on the open position,,UI/UX Designer": <br>
-                    How long does it usually take for you to review a application? I have some options right now but I would like to consider your company as well but i have no response since I applied.Please just give me a quick message.<br>
-                    Thanks and best regards,
-                    Julian Herbst
-                    </p>
-                    <p class="time"> Message sent 1 week ago</p>
-                </div>
-
-                <button id="date">Today</button>
-                <div class="outgoing">
-                    <p class="message">Hi Julian,
-                        sorry for the delayed response but we're currently really busy screening a lot of new candidates.So to answer your question:Usually we need around 1 week to review
-                        the applications and I just took a look into yours.<br>
-                        We like what we see and would like to send you our Design Challenge- thats the
-                        way we see how qualified you are.The timeframe is a normal working day(-8 hours).<br>
-                        Please finish it within the next 7 days.If you have any questions feel free to message me here.
-                    </p>
-                    <p class="time">Message sent just now</p>
-                </div>
-            </div>
-
-            <div class="chat-input-wrapper">
-                <input type="text" placeholder="Write your message"/>
-                <span class="material-symbols-outlined">attach_file</span>
-                <span class="material-symbols-outlined">format_bold</span>
-                <span class="material-symbols-outlined">format_italic</span>
-                <span class="material-symbols-outlined">format_list_bulleted</span>
-                <span class="material-symbols-outlined">format_list_numbered</span>
-
-                <span class="material-symbols-outlined">sentiment_satisfied</span>
-                <span class="material-symbols-outlined">more_vert</span>
-
-                    <select id="send">
-                        <option value="Send">Send</option>
-                    </select>
-            </div>
-        </div>
-        </div>
+      <div class="right">
+        <button class="create-btn"><span class="material-symbols-outlined">add</span> Create new job</button>
+        <button class="alert-btn"><span class="material-symbols-outlined">notifications</span></button>
+        <button class="profile"><span class="avatar small">JH</span> Julian H. <span class="material-symbols-outlined">expand_more</span></button>
+      </div>
     </div>
+
+    <!-- SIDEBAR (column 1) -->
+    <aside class="sidebar">
+      <p class="brand">Fintory</p>
+      <p><span class="material-symbols-outlined">dashboard</span> Dashboard</p>
+      <p><span class="material-symbols-outlined">developer_guide</span> Jobs</p>
+      <p><span class="material-symbols-outlined">group</span> Candidates</p>
+      <p class="active"><span class="material-symbols-outlined">chat_bubble</span> Messages</p>
+      <p><span class="material-symbols-outlined">corporate_fare</span> Company</p>
+      <p><span class="material-symbols-outlined">settings</span> Settings</p>
+    </aside>
+
+    <!-- MESSAGE LIST (column 2) -->
+    <section class="message-list">
+      <h3>Messages <span class="count">(25)</span></h3>
+
+      <div class="search-input-wrapper small">
+        <span class="material-symbols-outlined">search</span>
+        <input type="text" placeholder="Search" />
+      </div>
+
+      <div class="messages">
+        <div class="message-item active">
+          <div class="meta">
+            <span class="avatar">JH</span>
+            <div class="title">
+              <strong>Julian H.</strong>
+              <p class="sub">applied for <span class="role">UI / UX Designer</span></p>
+            </div>
+            <span class="time">2h ago</span>
+          </div>
+          <p class="preview">Julian Herbst: Hi, I have a quick question regarding my application on the open ...</p>
+        </div>
+
+        <div class="message-item">
+          <div class="meta">
+            <span class="avatar">RJ</span>
+            <div class="title">
+              <strong>Ramona J.</strong>
+              <p class="sub">applied for <span class="role">UI / UX Designer</span></p>
+            </div>
+            <span class="time">12h ago</span>
+          </div>
+          <p class="preview">Lena Nattke: Hi Ramona, we just reviewed your application and we're happy to ...</p>
+        </div>
+
+        <div class="message-item">
+    <div class="meta">
+      <span class="avatar">DW</span>
+      <div class="title">
+        <strong>Dominik W.</strong>
+        <p class="sub">applied for A very very long position that</p>
+      </div>
+      <span class="time">2 days ago</span>
+    </div>
+    <p class="preview">Good morning, I just wanted to share my design challenge results ... ...</p>
+  </div>
+
+  <div class="message-item">
+    <div class="meta">
+      <span class="avatar">KM</span>
+      <div class="title">
+        <strong>Kevin M.</strong>
+        <p class="sub">applied for A very very long position that</p>
+      </div>
+      <span class="time">2 days ago</span>
+    </div>
+    <p class="preview">Good morning, I just wanted to share my design challenge results ... ...</p>
+  </div>
+
+  <div class="message-item">
+    <div class="meta">
+      <span class="avatar">RJ</span>
+      <div class="title">
+        <strong>Ramona J.</strong>
+        <p class="sub">applied for UI/UX Designer</p>
+      </div>
+      <span class="time">1 week ago</span>
+    </div>
+    <p class="preview">Good morning, I just wanted to share my design challenge results ... ...</p>
+  </div>
+
+  <div class="message-item">
+    <div class="meta">
+      <span class="avatar">DW</span>
+      <div class="title">
+        <strong>Dominik W.</strong>
+        <p class="sub">applied for Teamlead Design</p>
+      </div>
+      <span class="time">08.03.20</span>
+    </div>
+    <p class="preview">Lena Nattke: Hi Ramona, we just reviewed your application and we're happy to ...</p>
+  </div>      </div>
+    </section>
+
+    <!-- CHAT AREA (column 3) -->
+    <main class="chat-area">
+      <header class="chat-header">
+        <div class="left">
+          <span class="avatar large">JH</span>
+          <div class="meta">
+            <h3>Julian Herbst</h3>
+            <p class="role">applied for <span>UI / UX Designer</span></p>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="view-profile">View Profile</button>
+          <select id="status">
+            <option>Applied</option>
+          </select>
+          <button id="thumbs-up"><span class="material-symbols-outlined">thumb_up</span></button>
+          <button id="cancel"><span class="material-symbols-outlined">close</span></button>
+          <span class="material-symbols-outlined">more_vert</span>
+        </div>
+      </header>
+
+      <div class="chat-messages">
+        <button class="date-chip">09.03.20</button>
+
+        <div class="incoming">
+          <div class="msg-head">
+            <span class="avatar">JH</span>
+            <strong>Julian Herbst</strong>
+          </div>
+          <p class="message">
+            Hi Lena, I have a quick question regarding my application on the open position "UI/UX Designer":
+            <br><br>
+            How long does it usually take for you to review an application? I have some options right now but I would like to consider your company as well but I have no response since I applied. Please just give me a quick message.
+            <br><br>
+            Thanks and best regards,<br>Julian Herbst
+          </p>
+          <p class="time">Message sent 1 week ago</p>
+        </div>
+
+        <button class="date-chip">Today</button>
+
+        <div class="outgoing">
+            <div class="msg-head">
+            <span class="avatar">LN</span>
+            </div>
+          <p class="message">
+            Hi Julian, sorry for the delayed response but we're currently really busy screening a lot of new candidates. So to answer your question: Usually we need around 1 week to review the applications and I just took a look into yours.
+            <br><br>
+            We like what we see and would like to send you our Design Challenge – that's the way we see how qualified you are. The timeframe is a normal working day (~8 hours).
+            <br><br>
+            Please finish it within the next 7 days. If you have any questions feel free to message me here.
+          </p>
+          <p class="time">Message sent just now</p>
+        </div>
+      </div>
+
+      <div class="chat-input-wrapper">
+        <input type="text" placeholder="Write your message" />
+        <span class="material-symbols-outlined">attach_file</span>
+        <span class="material-symbols-outlined">format_bold</span>
+        <span class="material-symbols-outlined">format_italic</span>
+        <span class="material-symbols-outlined">format_list_bulleted</span>
+        <span class="material-symbols-outlined">sentiment_satisfied</span>
+        <select id="send">
+          <option>Send</option>
+        </select>
+      </div>
+    </main>
+  </div>
 </body>
 </html>
-
