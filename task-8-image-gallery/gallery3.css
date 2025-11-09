@@ -1,59 +1,65 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: #f6f7fb;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background: #f6f7fb;
   font-family: 'Poppins', sans-serif;
 }
 
-/* The gallery grid */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  background: white;
+  display: flex;
+  gap: 5px;
+  background: rgb(239, 237, 237);
   padding: 10px;
-  border: 8px solid white;
-  max-width: 1100px;
+  max-width: 1000px;
 }
 
-/* Each column uses grid internally for perfect alignment */
 .column {
+  flex: 1;
   display: grid;
-  gap: 10px;
+  gap: 2px;
 }
 
-/* Left and right columns: 4 equal small images */
-.left img,
-.right img {
+.column.left,
+.column.right {
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.column.left img,
+.column.right img {
   width: 100%;
-  height: 180px;
+  height: 150px;
   object-fit: cover;
-  border-radius: 4px;
 }
 
-/* Middle column layout */
-.middle {
-  display: grid;
-  grid-template-rows: 380px repeat(3, 180px);
-  gap: 10px;
+/* Middle column */
+.column.middle {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
-.middle img {
+.column.middle > img {
   width: 100%;
+  flex-grow: 1; /* large image takes all remaining space */
   object-fit: cover;
-  border-radius: 4px;
 }
 
-/* The large top image */
-.middle .large {
-  height: 380px;
+/* Bottom row images */
+.bottom-row {
+  display: flex;
+  gap: 5px;
+}
+
+.bottom-row img {
+  flex: 1;
+  height: 150px;
   object-fit: cover;
 }
