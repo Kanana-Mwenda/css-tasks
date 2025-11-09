@@ -3,10 +3,8 @@ body{
     font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
     padding:0;
     margin:0;
-    display: grid;
     place-items: center;    
     min-height: 100vh;
-
     overflow: hidden;
 }
 .mortgage-calculator{
@@ -139,6 +137,68 @@ background-color: blue;
 .mortgage-calculator .right .default-text .light-text{
     color:#90a1b6
 }
+/* Modal Styles */
+.page-center {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(226, 244, 249) ;/* Semi-transparent background */
+    place-items: center;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 0;
+    border-radius: 1.5rem;
+    max-width: 950px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+/* Open modal button */
+.open-modal-btn {
+    padding: 1rem 2rem;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.open-modal-btn:hover {
+    background-color: #45a049;
+}
+
 
 
 
