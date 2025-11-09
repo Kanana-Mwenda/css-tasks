@@ -8,7 +8,7 @@
   --panel: #eef4ff;
 }
 body{
-  font-family: "Poppins", "Inter", sans-serif;
+  font-family: "Poppins",Verdana, Geneva, Tahoma, sans-serif;
   background: var(--bg);
   height: 100vh;
   display: flex;
