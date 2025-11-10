@@ -1,9 +1,9 @@
-/* ==================== DARK MODE (DEFAULT) ==================== */
+/*  DARK MODE */
 :root {
   --bg-color: #3b4664;
   --display-bg: #181f32;
   --display-text: #fff;
-  --btn-bg: #ffffff;       /* Keypad buttons always white */
+  --btn-bg: #ffffff;   
   --btn-text: #000;
   --btn-special-bg: #647198;
   --btn-special-text: #fff;
@@ -13,12 +13,12 @@
   --font-family: 'Segoe UI', Verdana, sans-serif;
 }
 
-/* ==================== LIGHT MODE ==================== */
+/*  LIGHT MODE  */
 body.light-mode {
   --bg-color: #ffffff;
   --display-bg: #f2f2f2;
   --display-text: #111;
-  --btn-bg: #ffffff;       /* Keypad buttons still white */
+  --btn-bg: #ffffff;     
   --btn-text: #000;
   --btn-special-bg: #647198;
   --btn-special-text: #fff;
@@ -27,8 +27,6 @@ body.light-mode {
   --btn-equals-bg: #d13f30;
 }
 
-
-/* ==================== GENERAL ==================== */
 body {
   display: flex;
   justify-content: center;
@@ -61,7 +59,7 @@ body {
 }
 
 .theme-switch input {
-  display: none; /* hide the checkbox */
+  display: none; 
 }
 
 /* Slider track */
@@ -70,7 +68,7 @@ body {
   display: inline-block;
   width: 50px;
   height: 25px;
-  background-color: #181f32;  /* default dark track */
+  background-color: #181f32;  
   border-radius: 25px;
   cursor: pointer;
   transition: background 0.3s;
@@ -84,19 +82,19 @@ body {
   left: 2px;
   width: 21px;
   height: 21px;
-  background-color: #d13f30;  /* red thumb in dark mode */
+  background-color: #d13f30;  
   border-radius: 50%;
   transition: transform 0.3s, background-color 0.3s;
 }
 
 /* Checked (light mode) */
 input:checked + .switch {
-  background-color: #f2f2f2;   /* light track */
+  background-color: #f2f2f2;   
 }
 
 input:checked + .switch::before {
-  transform: translateX(25px);  /* move thumb */
-  background-color: #378fe9;    /* thumb color for light mode */
+  transform: translateX(25px);  
+  background-color: #378fe9;    
 }
 
 .display {
@@ -119,8 +117,6 @@ input:checked + .switch::before {
   border-radius: 10px; 
   transition: background 0.3s ease;
 }
-
-/* Keypad buttons always white */
 .keypad button {
   padding: 1rem 2rem;
   font-size: 1.2rem;
