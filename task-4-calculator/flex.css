@@ -1,43 +1,153 @@
+/* ========== VARIABLES ========== */
+:root {
+  --bg: #f3f4f6;
+  --calc-bg: #ffffff;
+  --text: #111;
+  --display-bg: #f0f2f5;
+  --btn-bg: #e0e3e8;
+  --btn-text: #111;
+  --special-bg: #647198;
+  --equals-bg: #d13f30;
+}
+
+/* Dark mode overrides */
+body.dark-mode {
+  --bg: #181a20;
+  --calc-bg: #22252d;
+  --text: #fff;
+  --display-bg: #1f232b;
+  --btn-bg: #333740;
+  --btn-text: #fff;
+  --special-bg: #4b5676;
+  --equals-bg: #ff5f40;
+}
+
+/* ========== GENERAL ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
+  transition: background 0.3s ease;
+}
+
+.calculator {
+  background: var(--calc-bg);
+  color: var(--text);
+  width: 340px;
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ========== HEADER ========== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* Theme toggle */
+.theme-switch {
+  position: relative;
+}
+#toggle {
+  display: none;
+}
+
+.switch {
+  display: inline-block;
+  width: 45px;
+  height: 22px;
+  background: #444;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.3s ease;
+}
+.switch::after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  transition: transform 0.3s ease;
+}
+#toggle:checked + .switch {
+  background: #00bfa6;
+}
+#toggle:checked + .switch::after {
+  transform: translateX(22px);
+}
+
+/* ========== DISPLAY ========== */
+.display {
+  background: var(--display-bg);
+  color: var(--text);
+  font-size: 2rem;
+  text-align: right;
+  padding: 20px;
+  border-radius: 10px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ========== KEYPAD ========== */
 .keypad {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;             
-  padding: 1rem;
-  background-color: var(--display-bg);
-  border-radius: 10px;
-  justify-content: space-between;
+  gap: 12px;
+  justify-content: center;
 }
 
 .keypad button {
-  flex: 1 0 22%;         
-  padding: 1rem 0;
-  font-size: 1.2rem;
+  flex: 1 0 22%;
   background: var(--btn-bg);
   color: var(--btn-text);
+  font-size: 1.2rem;
+  font-weight: 600;
   border: none;
   border-radius: 8px;
+  padding: 14px 0;
   cursor: pointer;
-  font-weight: bold;
-  text-align: center;
+  transition: background 0.2s, transform 0.1s, color 0.3s ease;
 }
 
-/* Special buttons width */
-.keypad .equals, 
-.keypad .reset {
-  flex: 1 0 47%;          
+.keypad button:hover {
+  filter: brightness(0.9);
 }
 
-.keypad .del {
-  background: var(--btn-special-bg);
-  color: var(--btn-special-text);
+.keypad button:active {
+  transform: scale(0.96);
 }
 
-.keypad .equals {
-  background: var(--btn-equals-bg);
-  color: var(--btn-special-text);
+/* Special buttons */
+button.del,
+button.reset {
+  background: var(--special-bg);
+  color: #fff;
 }
 
-.keypad .reset {
-  background: var(--btn-special-bg);
-  color: var(--btn-reset-text);
+button.equals {
+  background: var(--equals-bg);
+  color: #fff;
 }
