@@ -25,7 +25,7 @@ body{
   box-shadow: 0 10px 30px rgba(16,24,40,0.06);
   display: grid;
   grid-template-rows: 64px 1fr;
-  grid-template-columns: 220px 320px 1fr; /* 3 columns: sidebar, messages, chat (1fr biggest) */
+  grid-template-columns: 220px 320px 1fr; 
   grid-template-areas:
     "header header header"
     "sidebar messages chat";
@@ -306,7 +306,7 @@ body{
   border-radius:8px; 
   cursor:pointer; }
 
-/* chat messages area (fills right big column) */
+/* chat messages area */
 .chat-messages{
   background:transparent; 
   flex:1; 
