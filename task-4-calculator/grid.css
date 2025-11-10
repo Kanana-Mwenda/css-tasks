@@ -1,69 +1,82 @@
+/* ==================== DARK MODE (DEFAULT) ==================== */
 :root {
   --bg-color: #3b4664;
   --display-bg: #181f32;
   --display-text: #fff;
-  --btn-bg: #eae3dc;
+  --btn-bg: #ffffff;       /* Keypad buttons always white */
   --btn-text: #000;
   --btn-special-bg: #647198;
   --btn-special-text: #fff;
+  --btn-reset-bg: #d13f30;
   --btn-reset-text: #fff;
   --btn-equals-bg: #d13f30;
   --font-family: 'Segoe UI', Verdana, sans-serif;
 }
 
+/* ==================== LIGHT MODE ==================== */
+body.light-mode {
+  --bg-color: #ffffff;
+  --display-bg: #f2f2f2;
+  --display-text: #111;
+  --btn-bg: #ffffff;       /* Keypad buttons still white */
+  --btn-text: #000;
+  --btn-special-bg: #647198;
+  --btn-special-text: #fff;
+  --btn-reset-bg: #378fe9;
+  --btn-reset-text: #fff;
+  --btn-equals-bg: #d13f30;
+}
+
+
+/* ==================== GENERAL ==================== */
 body {
   display: flex;
-  background-color:#3b4664 ;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: var(--font-family);
   font-weight: bold;
+  background-color: var(--bg-color);
+  transition: background 0.3s ease, color 0.3s ease;
 }
-.calculator .header{
-  color:#fff;
+
+.calculator {
+  background: var(--bg-color);
+  padding: 2rem;
+  width: 405px;
+  border-radius: 5px;
+  justify-content: center;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.calculator .header {
   display: flex;
-  justify-content: space-between; /* logo left, switch right */
-  align-items: center; 
+  justify-content: space-between;
+  align-items: center;
   padding: 1rem 2rem;
   background-color: var(--bg-color);
   color: var(--display-text);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-.logo {
-  margin: 0;
-  margin-left: -25px;
-  font-size: 1.8rem;
-  font-weight: bold;
-  font-family: var(--font-family);
-}
-
-/* Theme switch container */
-.theme-switch {
-  display: flex;
-  align-items: center;
-}
-
-/* Hide checkbox */
 .theme-switch input {
-  display: none;
+  display: none; /* hide the checkbox */
 }
 
-/* The slider */
+/* Slider track */
 .switch {
   position: relative;
   display: inline-block;
   width: 50px;
   height: 25px;
-  background-color: #181f32;
+  background-color: #181f32;  /* default dark track */
   border-radius: 25px;
   cursor: pointer;
   transition: background 0.3s;
-  margin-right: -20px;
 }
 
-/* The circle inside the slider */
+/* Slider thumb */
 .switch::before {
   content: "";
   position: absolute;
@@ -71,41 +84,19 @@ body {
   left: 2px;
   width: 21px;
   height: 21px;
-  background-color:#d13f30;
+  background-color: #d13f30;  /* red thumb in dark mode */
   border-radius: 50%;
-  transition: transform 0.3s;
+  transition: transform 0.3s, background-color 0.3s;
 }
 
-/* Move circle when checked */
+/* Checked (light mode) */
 input:checked + .switch {
-  background-color: #fff;
+  background-color: #f2f2f2;   /* light track */
 }
 
 input:checked + .switch::before {
-  transform: translateX(25px);
-}
-
-body.dark-mode {
-  --bg-color: #181f32;
-  --display-bg: #3b4664;
-  --display-text: #fff;
-  --btn-bg: #4e598c;
-  --btn-text: #fff;
-  --btn-special-bg: #647198;
-  --btn-special-text: #fff;
-  --btn-reset-bg: #d13f30;
-  --btn-reset-text: #fff;
-  --btn-equals-bg: #d13f30;
-}
-
-/* grid */
-.calculator {
-  background: var(--bg-color);
-  padding: 2rem;
-  width: 405px;
-  font-family: var(--font-family);
-  border-radius: 5px;
-  justify-content: center;
+  transform: translateX(25px);  /* move thumb */
+  background-color: #378fe9;    /* thumb color for light mode */
 }
 
 .display {
@@ -116,7 +107,7 @@ body.dark-mode {
   padding: 1rem;
   border-radius: 8px;
   margin-bottom: 1rem;
-  position: relative;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .keypad {
@@ -126,8 +117,10 @@ body.dark-mode {
   background-color: var(--display-bg);
   padding: 1rem; 
   border-radius: 10px; 
+  transition: background 0.3s ease;
 }
 
+/* Keypad buttons always white */
 .keypad button {
   padding: 1rem 2rem;
   font-size: 1.2rem;
@@ -137,20 +130,21 @@ body.dark-mode {
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-.keypad .del {
+.keypad .del,
+.keypad .reset {
   background: var(--btn-special-bg);
   color: var(--btn-special-text);
 }
 
 .keypad .equals {
-  background:var(--btn-equals-bg);
+  background: var(--btn-equals-bg);
   color: var(--btn-special-text);
   grid-column: span 2;
 }
+
 .keypad .reset {
-  background: var(--btn-special-bg);
-  color: var(--btn-reset-text);
   grid-column: span 2;
 }
