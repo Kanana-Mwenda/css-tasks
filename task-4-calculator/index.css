@@ -25,7 +25,7 @@ body {
   color:#fff;
   display: flex;
   justify-content: space-between; /* logo left, switch right */
-  align-items: center; /* vertically align items */
+  align-items: center; 
   padding: 1rem 2rem;
   background-color: var(--bg-color);
   color: var(--display-text);
