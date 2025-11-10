@@ -1,0 +1,43 @@
+.keypad {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;             
+  padding: 1rem;
+  background-color: var(--display-bg);
+  border-radius: 10px;
+  justify-content: space-between;
+}
+
+.keypad button {
+  flex: 1 0 22%;         
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Special buttons width */
+.keypad .equals, 
+.keypad .reset {
+  flex: 1 0 47%;          
+}
+
+.keypad .del {
+  background: var(--btn-special-bg);
+  color: var(--btn-special-text);
+}
+
+.keypad .equals {
+  background: var(--btn-equals-bg);
+  color: var(--btn-special-text);
+}
+
+.keypad .reset {
+  background: var(--btn-special-bg);
+  color: var(--btn-reset-text);
+}
