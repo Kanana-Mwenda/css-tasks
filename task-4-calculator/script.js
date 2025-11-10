@@ -2,13 +2,16 @@ const toggle = document.getElementById('toggle');
 const display = document.getElementById('display');
 const buttons = document.querySelectorAll('.keypad button');
 
-// Set dark mode as default
-document.body.classList.remove('light-mode');
+// Dark mode as default
+document.body.classList.add('dark-mode'); // dark by default
 
+// Toggle light/dark mode
 toggle.addEventListener('change', () => {
   document.body.classList.toggle('light-mode');
+  document.body.classList.toggle('dark-mode');
 });
 
+// Calculator button logic
 buttons.forEach(btn => {
   btn.addEventListener('click', () => {
     const val = btn.textContent;

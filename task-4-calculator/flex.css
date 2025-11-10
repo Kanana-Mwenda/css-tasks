@@ -10,7 +10,7 @@
   --equals-bg: #d13f30;
 }
 
-/* Dark mode overrides */
+/* Dark mode variables */
 body.dark-mode {
   --bg: #181a20;
   --calc-bg: #22252d;
@@ -22,13 +22,19 @@ body.dark-mode {
   --equals-bg: #ff5f40;
 }
 
-/* ========== GENERAL ========== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Light mode variables */
+body.light-mode {
+  --bg: #f3f4f6;
+  --calc-bg: #ffffff;
+  --text: #111;
+  --display-bg: #f0f2f5;
+  --btn-bg: #e0e3e8;
+  --btn-text: #111;
+  --special-bg: #647198;
+  --equals-bg: #d13f30;
 }
 
+/* ========== GENERAL ========== */
 body {
   height: 100vh;
   display: flex;
@@ -36,7 +42,7 @@ body {
   align-items: center;
   font-family: 'Poppins', sans-serif;
   background-color: var(--bg);
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .calculator {
@@ -64,10 +70,11 @@ body {
   font-weight: 600;
 }
 
-/* Theme toggle */
+/* ========== THEME SWITCH ========== */
 .theme-switch {
   position: relative;
 }
+
 #toggle {
   display: none;
 }
@@ -76,26 +83,29 @@ body {
   display: inline-block;
   width: 45px;
   height: 22px;
-  background: #444;
+  background: #444; /* fallback */
   border-radius: 20px;
   cursor: pointer;
   position: relative;
   transition: background 0.3s ease;
 }
+
 .switch::after {
   content: "";
   width: 18px;
   height: 18px;
-  background: #fff;
+  background: #fff; /* fallback */
   border-radius: 50%;
   position: absolute;
   top: 2px;
   left: 3px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
+
 #toggle:checked + .switch {
   background: #00bfa6;
 }
+
 #toggle:checked + .switch::after {
   transform: translateX(22px);
 }
@@ -129,7 +139,7 @@ body {
   border-radius: 8px;
   padding: 14px 0;
   cursor: pointer;
-  transition: background 0.2s, transform 0.1s, color 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.1s;
 }
 
 .keypad button:hover {
