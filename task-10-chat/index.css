@@ -46,7 +46,6 @@ body{
    display:flex; 
    align-items:center; 
    gap:12px; 
-  
   }
 .header .center {
    flex:1; 
@@ -58,6 +57,13 @@ body{
    gap:10px; 
    align-items:center; 
   }
+
+  .header .logo img {
+  width: 80px;
+  height: auto;   
+  display: block; 
+}
+
 
 /* search */
 .search-input-wrapper{
@@ -72,6 +78,29 @@ body{
 .search-input-wrapper.small{ max-width:290px; }
 .search-input-wrapper input{
   border:0; outline:0; background:transparent; margin-left:8px; font-size:14px;
+}
+
+/* Container for the select (like search input wrapper) */
+.filter {
+  max-width: 290px;
+  border: 1px solid #ccc;   /* box border */
+  border-radius: 6px;       /* rounded corners */
+  padding: 10px 4px;         /* inner padding like an input */
+  background-color: #fff;   /* input background */
+  display: flex;
+  align-items: center;
+  overflow: visible;        /* ensures dropdown is not clipped */
+}
+
+/* Minimal styling for the select while keeping native arrow */
+.filter select {
+  width: 100%;
+  border: 0;                /* remove extra border inside box */
+  outline: 0;               /* remove focus outline */
+  background: transparent;  /* use container background */
+  font-size: 14px;
+  cursor: pointer;
+  height: 100%;             /* fills wrapper height */
 }
 
 /* header buttons */
@@ -90,6 +119,7 @@ body{
   border-right: 1px solid #ebeff5;
   background: var(--card);
   display:flex; flex-direction:column; gap:10px;
+  font-weight: bold;
 }
 .sidebar .brand{ font-weight:700; margin-bottom:6px; color:#2b3a45; }
 .sidebar p{ display:flex; align-items:center; gap:10px; color:var(--muted); padding:8px 6px; border-radius:8px; cursor:pointer; font-size:14px; }
