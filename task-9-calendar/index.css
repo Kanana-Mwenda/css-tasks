@@ -85,7 +85,18 @@ button:hover {
   font-size: 14px;
 }
 
-.prev-month, .next-month {
+.next-month {
   background: #f7f7f7;
+  color: #a09f9f;
+}
+
+.prev-month{
+  background: repeating-linear-gradient(
+    45deg,
+    #f7f7f7,
+    #f7f7f7 5px,
+    #e0e0e0 5px,
+    #e0e0e0 6px
+  );
   color: #a09f9f;
 }
