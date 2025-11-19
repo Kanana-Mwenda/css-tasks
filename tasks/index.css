@@ -1,62 +1,68 @@
-body{
+body {
     font-family: "Lexend Deca", sans-serif;
     padding: 20px;
     background: #651237;
-    max-height: 100vh;
 }
 
 header h1 {
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 30px;
-  color:#fff;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #fff;
 }
-h2{
+
+h2 {
     font-size: 16px;
-    color:#fff;
+    color: #fff;
 }
 
 .tasks-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
 }
 
+/* Entire card now clickable */
 .task-card {
-  display: block;
-  padding: 60px;
-  background: #ba4278;
-  border-radius: 12px;
-  text-align: center;
-  font-size: 18px;
-  text-decoration: none;
-  color: #222;
-  font-weight: 600;
-  cursor:pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  border: 2px solid transparent;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    display: block;
+    padding: 50px;
+    background: #ba4278;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border: 2px solid transparent;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
 .task-card:hover {
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
-  border-color: #fff;
-  background: #651237;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    border-color: #fff;
+    background: #651237;
 }
 
-.task-card button {
-  background: #651237;
-  color: #fff;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 50px;
-  font-size: 18px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background 0.2s ease, transform 0.2s ease;
+/* Number circle button */
+.task-btn {
+    background: #651237;
+    color: #fff;
+    border: none;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    font-size: 22px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background 0.2s ease, transform 0.2s ease;
 }
 
-.task-card:hover button {
-  background: #bb4678;
-  transform: rotate(360deg);
+/* Rotate animation on hover */
+.task-card:hover .task-btn {
+    background: #bb4678;
+    transform: rotate(360deg);
 }
