@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #3b4664;
+    font-family: "Lexend Deca", sans-serif;
+}
+
+.nav-buttons {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-buttons li {
+    list-style: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #647198;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #4d556b;
+    transform: translateY(-3px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
