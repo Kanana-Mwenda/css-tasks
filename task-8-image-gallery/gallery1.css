@@ -1,46 +1,52 @@
-body {
+#gallery1-wrapper {
   margin: 0;
   padding: 20px;
   font-family: "Lexend Deca", sans-serif;
   background-color: #f0f0f0;
+  margin-bottom: 70px;
 }
 
-.gallery {
+#gallery1-wrapper h1{
+  text-align: center;
+}
+
+#gallery1-wrapper .gallery {
   display: grid;
   grid-template-rows: auto auto auto;
   gap: 5px;
   max-width: 1000px;
   margin: auto;
   border: 12px solid #f0f0f0;
-  box-shadow: 0 4px 10px rgba(68, 68, 68, 0.15)
+  box-shadow: 0 4px 10px rgba(68, 68, 68, 0.15);
 }
-.row-1{
-    margin-bottom: 5px;
+
+#gallery1-wrapper .row-1 {
+  margin-bottom: 5px;
 }
 
 /* First and third row: 5 equal small images */
-.row-1, .row-3 {
+#gallery1-wrapper .row-1,
+#gallery1-wrapper .row-3 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 10px;
   box-shadow: 0 4px 10px rgba(115, 114, 114, 0.15);
 }
 
-.row-1 img, .row-3 img {
+#gallery1-wrapper .row-1 img,
+#gallery1-wrapper .row-3 img {
   width: 100%;
   height: 100px; /* small uniform height */
   object-fit: cover; /* crop to fit box */
   display: block;
-  box-shadow: 0 4px 10px rgba(115, 114, 114, 0.15)
+  box-shadow: 0 4px 10px rgba(115, 114, 114, 0.15);
 }
 
 /* Middle row: full-width large image */
-.row-2 img {
+#gallery1-wrapper .row-2 img {
   width: 100%;
   height: 200px;
   object-fit: cover;
-
   display: block;
   margin-bottom: 5px;
 }
-
