@@ -1,10 +1,9 @@
 body {
   margin: 0;
   font-family: "Lexend Deca", sans-serif;
-  overflow: hidden;
 }
 
-.container {
+#layout3 .container {
   display: grid;
   grid-template-areas:
     "nav header "
@@ -14,37 +13,37 @@ body {
   grid-template-columns: 200px 1fr;
   grid-template-rows: 80px 1fr 60px 60px;
   gap: 6px;
-  height: 100vh;
+  min-height: 300px;
   background-color: white;
   padding: 0;
 }
 
-header {
+#layout3 header {
   grid-area: header;
   background-color: rgb(143, 207, 48);
   text-align: left;
   padding: 10px;
 }
 
-nav {
+#layout3 nav {
   grid-area: nav;
   background-color: rgb(143, 207, 48);
   padding: 10px;
 }
 
-article {
+#layout3 article {
   grid-area: article;
   background-color: rgb(143, 207, 48);
   padding: 10px;
 }
 
-aside {
+#layout3 aside {
   grid-area: ads;
   background-color: rgb(143, 207, 48);
   padding: 10px;
 }
 
-footer {
+#layout3 footer {
   grid-area: footer;
   background-color: rgb(143, 207, 48);
   padding: 10px;
