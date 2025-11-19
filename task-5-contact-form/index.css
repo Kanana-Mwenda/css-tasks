@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #231780;
+    font-family: "Lexend Deca", sans-serif;
 }
 .contact-form {
     display: grid;
