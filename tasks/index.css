@@ -23,7 +23,6 @@ h2 {
     gap: 20px;
 }
 
-/* Entire card now clickable */
 .task-card {
     display: block;
     padding: 50px;
@@ -46,7 +45,6 @@ h2 {
     background: #651237;
 }
 
-/* Number circle button */
 .task-btn {
     background: #651237;
     color: #fff;
