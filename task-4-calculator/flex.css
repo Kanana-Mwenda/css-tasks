@@ -38,7 +38,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Poppins', sans-serif;
+  font-family:"Lexend Deca", sans-serif;
   background-color: var(--bg);
   transition: background 0.3s ease, color 0.3s ease;
 }
