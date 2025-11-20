@@ -25,6 +25,7 @@ body {
 
 .chat-input-wrapper input::placeholder {
     color:rgb(88, 86, 86);
+    font-family: "Lexend Deca", sans-serif;
 }
 
 .chat-input-wrapper input {
