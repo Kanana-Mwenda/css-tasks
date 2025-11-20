@@ -145,6 +145,11 @@ background-color: blue;
     display: grid;
     place-items: center;
 }
+.page-center .modal-paragraph{
+    color: #1e334d;
+    margin-bottom: -300px;
+    margin-top: 20px;
+}
 .modal {
     display: none; /* Hidden by default */
     position: fixed;
@@ -195,6 +200,7 @@ background-color: blue;
     border: none;
     background-color: #4CAF50;
     color: white;
+    margin-bottom: 200px;
 }
 
 .open-modal-btn:hover {
