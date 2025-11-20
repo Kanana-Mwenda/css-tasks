@@ -24,7 +24,7 @@ body {
 .middle-panel {
     position: absolute;
     top: 50%; 
-    left: 35%;       
+    left: 28%;       
     transform: translate(-50%, -50%); 
     z-index: 10;   
     width: 400px;
@@ -154,7 +154,7 @@ body {
 .right-panel {
     float: right;
     height: 100vh;
-    width:80%;
+    width:90%;
 }
 
 .right-panel img {
@@ -179,7 +179,7 @@ body {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 36%;
+    width: 28%;
     height:30px;
     padding: 5px 0px;
     text-align: center;
