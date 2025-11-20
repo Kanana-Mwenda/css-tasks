@@ -1,4 +1,3 @@
-// ----- Existing Mortgage Form Logic -----
 const mortgageForm = document.getElementById('mortgage-form');
 const clearBtn = document.getElementById('clear-btn');
 const calculateBtn = document.getElementById('calculate-btn');
