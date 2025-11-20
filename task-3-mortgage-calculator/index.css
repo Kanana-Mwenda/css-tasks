@@ -37,6 +37,7 @@ body{
     text-decoration: underline;
     border: 0;
     margin-left: 1rem;
+    font-family: "Lexend Deca", sans-serif;
 }
 .mortgage-calculator .left .header button:hover{
     color: rgb(117, 116, 116);
