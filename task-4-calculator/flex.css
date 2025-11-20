@@ -42,7 +42,7 @@ body {
 .calculator {
   background: var(--bg-color);
   padding: 2rem;
-  width: 405px;
+  width: 420px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -116,7 +116,7 @@ input:checked + .switch::before {
 }
 
 .keypad button {
-  flex: 1 0 calc(25% - 1rem); 
+  flex: 0 0 calc(25% - 1rem); 
   padding: 1rem 0;
   font-size: 1.2rem;
   background: var(--btn-bg);
@@ -143,3 +143,11 @@ input:checked + .switch::before {
   background: var(--btn-equals-bg);
   color: var(--btn-special-text);
 }
+
+
+.keypad .op, .keypad .del{
+  flex-grow: 2;      
+  padding: 1rem 0;  
+  font-size: 1.4rem;  
+}
+
