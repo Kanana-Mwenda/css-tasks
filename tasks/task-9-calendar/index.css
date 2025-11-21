@@ -35,13 +35,14 @@ button {
   padding: 8px 13px;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-family: "Lexend Deca", sans-serif;
 }
 
 button:hover {
   background-color: #f1f1f1;
 }
 
-.left-buttons, .right-buttons {
+.left-buttons .right-buttons {
   display: flex;
   gap: 0;
   font-size:18px;
