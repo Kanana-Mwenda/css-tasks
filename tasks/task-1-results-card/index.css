@@ -159,6 +159,7 @@ body{
     cursor: pointer;
     margin-top: 10px;
     margin-left: 25px;
+    font-family: "Lexend Deca", sans-serif;
 }
 
 .continue-button:hover {
